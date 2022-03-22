@@ -19,6 +19,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         startButton = (Button) findViewById(R.id.startButton);
         resetButton = (Button) findViewById(R.id.resetButton);
